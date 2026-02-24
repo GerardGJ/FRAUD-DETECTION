@@ -4,6 +4,11 @@
 
 The objecive of this project is two fold. Fist, want to make a fraude detection project that has good accuracy, following every step and learning, using different methods. Second, want to make two presentations of the project, one is going to be more technology base and more technical, the other is going to be more business based trying to lower the presentation and make it as if I was presenting it to the stake holders, focusing on the important staff. 
 
+## Data
+
+The data for this project was gotten from kaggle.
+The link to the dataset is the following: [link](https://www.kaggle.com/datasets/jayjoshi37/digital-payment-fraud-detection)
+
 ## Steps 
 
 The steps that are going to be used in this project are going to be the most common ones. This project is separed in 2 different sections:
