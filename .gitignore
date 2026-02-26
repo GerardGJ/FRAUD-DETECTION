@@ -11,3 +11,9 @@ wheels/
 
 # data
 /data/*
+
+# Model
+/models/*
+
+# Preprocessing
+/utils_models/*
