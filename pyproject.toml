@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "imbalanced-learn>=0.14.1",
     "optuna>=4.7.0",
     "pandas>=3.0.1",
     "polars>=1.38.1",
