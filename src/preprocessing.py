@@ -9,7 +9,7 @@ CATEGORICAL_VARIABLES = ["transaction_type", "payment_mode", "device_type", "dev
 
 class Preprocesser():
 
-    def previousActionsGenerator(self, 
+    def _previousActionsGenerator(self, 
                                  df: pl.DataFrame
         ) -> pl.DataFrame: 
         """
@@ -72,7 +72,7 @@ class Preprocesser():
 
         return df
 
-    def getFeaturnEncodingModles(self, 
+    def _getFeaturnEncodingModles(self, 
                                  categorical_columns: list[str]
         ) -> dict[str,LabelEncoder]:
 
@@ -85,7 +85,7 @@ class Preprocesser():
 
         return dict_le
          
-    def featrueEncoding(self, 
+    def _featrueEncoding(self, 
                         dict_le: dict[str,LabelEncoder], 
                         df: pd.DataFrame, 
                         categorical_columns: list[str]
@@ -110,13 +110,13 @@ class Preprocesser():
         
         # The first step in the preprocessing step is the 
         # Feature Engineering
-        df_fe_polars = self.previousActionsGenerator(df_polars)
+        df_fe_polars = self._previousActionsGenerator(df_polars)
         df_fe = df_fe_polars.to_pandas()
 
         # After this we will encode the different features
         # First we get the label encoders
-        dict_le = self.getFeaturnEncodingModles(CATEGORICAL_VARIABLES)
-        df_le = self.featrueEncoding(dict_le,df_fe,CATEGORICAL_VARIABLES)
+        dict_le = self._getFeaturnEncodingModles(CATEGORICAL_VARIABLES)
+        df_le = self._featrueEncoding(dict_le,df_fe,CATEGORICAL_VARIABLES)
 
         return df_le
 
