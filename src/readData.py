@@ -3,7 +3,6 @@
 # TODO: Also impement another data read for when data given through streamlit or API
 
 import pandas as pd
-import os
 
 class DataReader():
     """
