@@ -2,9 +2,9 @@
 
 import pandas as pd
 
-from readData import DataReader
-from preprocessing import Preprocesser
-from predict import Predicter
+from src.readData import DataReader
+from src.preprocessing import Preprocesser
+from src.predict import Predicter
 
 def predict_withpath(path:str) -> pd.DataFrame:
     
